@@ -14,7 +14,7 @@ import javax.annotation.PostConstruct;
  */
 @SpringView(name = CurrencyView.VIEW_NAME)
 @Slf4j
-public class CurrencyView extends VerticalLayout implements View {
+public class CurrencyView extends CustomComponent implements View {
 
     public static final String VIEW_NAME = "currency-view";
 
@@ -27,7 +27,7 @@ public class CurrencyView extends VerticalLayout implements View {
         grid.addRow("USD");
         grid.setSizeFull();
 
-        addComponent(grid);
+        setCompositionRoot(grid);
 
     }
 

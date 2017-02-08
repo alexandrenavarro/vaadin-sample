@@ -20,7 +20,7 @@ import java.util.List;
  */
 @Slf4j
 @SpringView(name = CountryView.VIEW_NAME)
-public class CountryView extends VerticalLayout implements View {
+public class CountryView extends CustomComponent implements View {
 
     public static final String VIEW_NAME = "country-view";
 
@@ -72,7 +72,7 @@ public class CountryView extends VerticalLayout implements View {
             cell.setComponent(filterField);
         }
 
-        addComponent(grid);
+        setCompositionRoot(grid);
 //        final Button button = new Button("Go to Default View");
 //        button.addClickListener(e -> {
 //            getUI().getNavigator().navigateTo(DefaultView.VIEW_NAME);
