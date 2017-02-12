@@ -45,6 +45,8 @@ public class MainUI extends UI implements ViewDisplay {
                 CountryView.VIEW_NAME));
         navigationBar.addComponent(createNavigationButton("Currency View",
                 CurrencyView.VIEW_NAME));
+        navigationBar.addComponent(createNavigationButton("Grid View",
+                GridView.VIEW_NAME));
 
         root.addComponent(navigationBar);
 
